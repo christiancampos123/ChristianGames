@@ -19,11 +19,11 @@ class ProductCard extends HTMLElement {
                     width: 80%;
                     display: flex;
                     justify-content: center;
-                    margin: 20px;
+                    margin: 1px;
                     border: 1px solid #ddd;
                     border-radius: 8px;
                     overflow: hidden;
-                    background-color: #555;
+                    background-color: #7da7c3;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 }
 
@@ -61,10 +61,11 @@ class ProductCard extends HTMLElement {
                 }
 
                 .description {
+                    border-radius:10px;
                     padding-top: 2rem;
                     padding-right: 2%;
                     padding-left: 2%;
-                    background-color: #555;
+                    background-color: #7da7c3;
                     width: 76%;
                     margin-bottom: 20px;
                 }
@@ -109,6 +110,15 @@ class ProductCard extends HTMLElement {
                     <p class="info-label">Géneros: <span>Aventura, Acción</span></p>
                     <p class="info-label">Nota: <span>4.5/5</span></p>
                     <p class="info-label">PEGI: <span>18+</span></p>
+                    <div class="video-container">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
+                        frameborder="0"
+                        allowfullscreen
+                    ></iframe>
+                </div>
                     <!-- Otros detalles adicionales que desees agregar -->
                     <div class="action-buttons">
                         <div class="buy-button" onclick="handleBuy()">Comprar</div>
@@ -125,6 +135,8 @@ class ProductCard extends HTMLElement {
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
             </div>
+
+            
         `;
     }
 }

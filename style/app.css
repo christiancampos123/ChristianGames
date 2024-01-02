@@ -1,7 +1,16 @@
+@font-face {
+  font-family: 'Sohne Butch';
+  src: url('./fonts/sohne-butch.woff2') format('woff2');
+  /* Agrega otros formatos de fuente aquí si es necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{
   margin:0;
   padding:0;
-  background-color: #4361ee;
+  background-color: hsl(204, 94%, 88%);
+  font-family: 'Sohne Butch', sans-serif;
 }
 
 .slider{

@@ -34,9 +34,12 @@ class GenreCarousel extends HTMLElement {
         flex: 0 0 auto;
         margin-right: 10px;
         cursor: pointer;
-        border: 1px solid #ccc; /* Borde */
+        border: 1px solid #ccc;
+        background:#7da7c3; /* Borde */
         border-radius: 8px; /* Bordes redondeados */
-        padding: 5px 10px; /* Espaciado interno */:
+        padding: 5px 10px; /* Espaciado interno */
+        font-weight: bold;
+        
     }
 
     .arrow {

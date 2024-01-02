@@ -14,7 +14,7 @@ class Footer extends HTMLElement {
     
         footer {
             margin-top:5rem;
-            background-color: #3a0ca3;
+            background-color: #022544;
             color: white;
             padding: 20px;
             display: grid;

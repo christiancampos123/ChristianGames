@@ -13,7 +13,7 @@ class Header extends HTMLElement {
     }
 
     header {
-        background-color: #3a0ca3;
+        background-color: #022544;
         color: white;
         padding: 10px;
         display: flex;
