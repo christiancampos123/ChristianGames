@@ -63,10 +63,15 @@ class GameGrid extends HTMLElement {
                     font-weight: bold;
                 }
 
+                .title{
+                    font-size:2.5rem;
+                    margin-top:4rem;
+                    margin-bottom:2rem;
+                }
+
             </style>
             <div class = "products">
-                <div class = "title">LOS MAS VENDIDOS</div>
-                <div class = "title">LOS QUE NO TANTO</div>
+                <div class = "title">Videojuegos</div>
                 <div class="game-grid">
                     ${this.generateGameCards()}
                 </div>
