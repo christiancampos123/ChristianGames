@@ -70,6 +70,8 @@ class Carrousel extends HTMLElement {
             { src: "./images/juego2.jpg" },
             { src: "./images/user-avatar.png" },
             { src: "./images/chatgpt-icon.webp" },
+            { src: "./images/arrow.jpg" },
+            { src: "./images/logo.png" },
         ];
 
         this.shadow.innerHTML = /*html*/ `

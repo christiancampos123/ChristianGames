@@ -77,7 +77,7 @@ class ProductCard extends HTMLElement {
                 }
 
                 .buy-button {
-                    background-color: yellow;
+                    background-color: #00ff00; /* Verde */
                     color: #000;
                     padding: 10px;
                     width:20%;
@@ -85,8 +85,8 @@ class ProductCard extends HTMLElement {
                     text-align:center;
                 }
 
-                .wishlist-button {
-                    background-color: #ffb6c1; /* Rosa pálido */
+                .cart-button {
+                    background-color: yellow;
                     color: #000;
                     text-align:center;
                     width:20%;
@@ -112,7 +112,7 @@ class ProductCard extends HTMLElement {
                     <!-- Otros detalles adicionales que desees agregar -->
                     <div class="action-buttons">
                         <div class="buy-button" onclick="handleBuy()">Comprar</div>
-                        <div class="wishlist-button" onclick="handleWishlist()">Add to Wishlist</div>
+                        <div class="cart-button" onclick="handleAddToCart()">Add to Cart</div>
                     </div>
                 </div>
             </div>

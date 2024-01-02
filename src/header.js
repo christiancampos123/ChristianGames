@@ -70,7 +70,9 @@ class Header extends HTMLElement {
     <div class="user-area">
         <div class="login" onclick="handleLogin()">Login</div>
         <div class="register" onclick="handleRegister()">Register</div>
+        <a href = "./cart.html">
         <div class="cart" onclick="handleCart()">🛒</div>
+        </a>
     </div>
 </header>
         `;
