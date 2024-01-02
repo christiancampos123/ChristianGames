@@ -3,6 +3,8 @@ class Carrousel extends HTMLElement {
         super();
         this.shadow = this.attachShadow({ mode: 'open' });
         this.slideIndex = 1;
+        this.prevButtonImage = "./images/arrow.jpg";
+        this.nextButtonImage = "./images/arrow.jpg";
         this.render();
     }
 
