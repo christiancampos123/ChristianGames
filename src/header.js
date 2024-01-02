@@ -56,11 +56,12 @@ class Header extends HTMLElement {
 </style>
 
 <header>
+<a href = "./index.html">
     <div class="logo">
         <!-- Coloca tu logo aquí -->
         <img src="./images/logo.png" alt="Logo">
     </div>
-
+</a>
     <div class="search-bar">
         <!-- Aquí puedes colocar tu barra de búsqueda -->
         <input type="text" placeholder="Search...">

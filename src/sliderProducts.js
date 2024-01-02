@@ -306,7 +306,9 @@ class ProductSlider extends HTMLElement {
           <div class="product-card">
               <div class="product-image">
                   <span class="discount-tag">${product.discount}% off</span>
+                  <a href = "./fichaJuego.html">
                   <img src="${product.image}" class="product-thumb" alt="">
+                  </a>
                   <button class="card-btn">add to wishlist</button>
               </div>
               <div class="product-info">
@@ -318,7 +320,6 @@ class ProductSlider extends HTMLElement {
   }
 
   attachEventListeners() {
-      // Agrega aquí tus event listeners si es necesario
   }
 }
 
