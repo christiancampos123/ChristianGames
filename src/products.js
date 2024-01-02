@@ -88,7 +88,15 @@ class GameGrid extends HTMLElement {
             { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
             { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
             { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+
 
         ];
 

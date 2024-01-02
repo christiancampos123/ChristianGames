@@ -5,7 +5,7 @@ class ProductSlider extends HTMLElement {
         this.products = [
             {
                 name: 'Producto 1',
-                image: './images/user-avatar.png',
+                image: './images/juego1.jpg',
                 price: 19.99,
             },
             {
@@ -15,7 +15,37 @@ class ProductSlider extends HTMLElement {
             },
             {
                 name: 'Producto 3',
-                image: './images/user-avatar.png',
+                image: './images/juego1.jpg',
+                price: 39.99,
+            },
+            {
+                name: 'Producto 3',
+                image: './images/juego2.jpg',
+                price: 39.99,
+            },
+            {
+                name: 'Producto 3',
+                image: './images/juego1.jpg',
+                price: 39.99,
+            },
+            {
+                name: 'Producto 3',
+                image: './images/juego1.jpg',
+                price: 39.99,
+            },
+            {
+                name: 'Producto 3',
+                image: './images/juego2.jpg',
+                price: 39.99,
+            },
+            {
+                name: 'Producto 3',
+                image: './images/juego1.jpg',
+                price: 39.99,
+            },
+            {
+                name: 'Producto 3',
+                image: './images/juego2.jpg',
                 price: 39.99,
             },
             {
@@ -25,47 +55,17 @@ class ProductSlider extends HTMLElement {
             },
             {
                 name: 'Producto 3',
-                image: './images/user-avatar.png',
+                image: './images/juego2.jpg',
                 price: 39.99,
             },
             {
                 name: 'Producto 3',
-                image: './images/user-avatar.png',
+                image: './images/juego1.jpg',
                 price: 39.99,
             },
             {
                 name: 'Producto 3',
-                image: './images/user-avatar.png',
-                price: 39.99,
-            },
-            {
-                name: 'Producto 3',
-                image: './images/user-avatar.png',
-                price: 39.99,
-            },
-            {
-                name: 'Producto 3',
-                image: './images/user-avatar.png',
-                price: 39.99,
-            },
-            {
-                name: 'Producto 3',
-                image: './images/user-avatar.png',
-                price: 39.99,
-            },
-            {
-                name: 'Producto 3',
-                image: './images/user-avatar.png',
-                price: 39.99,
-            },
-            {
-                name: 'Producto 3',
-                image: './images/user-avatar.png',
-                price: 39.99,
-            },
-            {
-                name: 'Producto 3',
-                image: './images/user-avatar.png',
+                image: './images/juego2.jpg',
                 price: 39.99,
             },
         ];
@@ -81,12 +81,14 @@ class ProductSlider extends HTMLElement {
         /* PRODUCTS */
         .product {
           position: relative;
+          display: flex;
+          flex-direction: column;
           overflow: hidden;
-          padding: 20px;
+          padding-right:10%;
+          padding-left:10%;
         }
         
         .product-category {
-          padding: 0 10vw;
           font-size: 30px;
           font-weight: 500;
           margin-bottom: 40px;
@@ -94,11 +96,12 @@ class ProductSlider extends HTMLElement {
         }
         
         .product-container {
-          padding: 0 10vw;
+          padding: 0px 0vw;
           display: flex;
           overflow-x: auto;
           scroll-behavior: smooth;
-          padding-left:3rem;
+          padding-left: 0rem;
+          overflow-y: hidden;
         }
         
         .product-container::-webkit-scrollbar {
@@ -196,30 +199,35 @@ class ProductSlider extends HTMLElement {
         .pre-btn,
         .nxt-btn {
           border: none;
-          width: 10vw;
-          height: 100%;
+          border-radius:100%;
+          width: 4vw;
+          height: 20%;
           position: absolute;
-          top: 0;
+          top: 40%;
           display: flex;
           justify-content: center;
           align-items: center;
-          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+          /*background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);*/
           cursor: pointer;
           z-index: 8;
         }
         
         .pre-btn {
-          left: 0;
+          left: -10px;
           transform: rotate(180deg);
+          border-radius:2rem;
         }
         
         .nxt-btn {
-          right: 0;
+          right: -10px;
         }
         
         .pre-btn img,
         .nxt-btn img {
-          opacity: 0.2;
+          opacity: 0.8;
+          width: 35px; /* Ajusta el ancho según tus necesidades */
+          height: 100px;
+          border-radius:2rem;
         }
         
         .pre-btn:hover img,
@@ -262,10 +270,14 @@ class ProductSlider extends HTMLElement {
         
         </style>
 
-    <section class="product"> 
+        <section class="product"> 
         <h2 class="product-category">best selling</h2>
-        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
-        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="arrow-container pre-btn">
+            <img src="images/arrow.jpg" alt="Previous">
+        </div>
+        <div class="arrow-container nxt-btn">
+            <img src="images/arrow.jpg" alt="Next">
+        </div>
         <div class="product-container">
             ${this.products.map(product => this.getProductCardHTML(product)).join('')}
         </div>
@@ -299,7 +311,6 @@ class ProductSlider extends HTMLElement {
               </div>
               <div class="product-info">
                   <h2 class="product-brand">${product.name}</h2>
-                  <p class="product-short-description">a short line about the cloth..</p>
                   <span class="price">$${product.price}</span><span class="actual-price">$${product.price + product.discount}</span>
               </div>
           </div>
