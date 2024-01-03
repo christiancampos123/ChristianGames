@@ -64,6 +64,7 @@ class GameGrid extends HTMLElement {
                 }
 
                 .title{
+                    font-weight:bold;
                     font-size:2.5rem;
                     margin-top:4rem;
                     margin-bottom:2rem;

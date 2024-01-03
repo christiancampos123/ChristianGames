@@ -9,8 +9,12 @@
 *{
   margin:0;
   padding:0;
-  background-color: hsl(204, 94%, 88%);
   font-family: 'Sohne Butch', sans-serif;
+}
+
+body{
+  background: hsl(204, 94%, 88%) url(../images/background5.png);
+  background-size:20%;
 }
 
 .slider{
@@ -27,6 +31,7 @@
   position: sticky;
   top: 0px;
   z-index: 100;
+  background-color: #022544;
 }
 
 .product-list-container {

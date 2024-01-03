@@ -89,8 +89,8 @@ class ProductSlider extends HTMLElement {
         }
         
         .product-category {
-          font-size: 30px;
-          font-weight: 500;
+          font-size:2.5rem;
+          font-weight: bold;
           margin-bottom: 40px;
           text-transform: capitalize;
         }
@@ -109,6 +109,9 @@ class ProductSlider extends HTMLElement {
         }
         
         .product-card {
+          background-color:#7DA7C3;
+          border-radius:10px;
+          padding:1rem;
           flex: 0 0 auto;
           width: 250px;
           height: 450px;
@@ -281,7 +284,7 @@ class ProductSlider extends HTMLElement {
         <div class="product-container">
             ${this.products.map(product => this.getProductCardHTML(product)).join('')}
         </div>
-    </section>
+        </section>
       `;
       const productContainers = [...this.shadow.querySelectorAll('.product-container')];
       const nxtBtn = [...this.shadow.querySelectorAll('.nxt-btn')];

@@ -44,6 +44,7 @@ class GenreCarousel extends HTMLElement {
 
     .arrow {
         position: absolute;
+        color:white;
         cursor: pointer;
         margin: 0 60px; /* Ajusta el margen según tus necesidades */
     }

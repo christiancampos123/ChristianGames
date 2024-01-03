@@ -45,6 +45,7 @@ class Footer extends HTMLElement {
             width: 24px;
             height: 24px;
             margin-right: 5px;
+            fill:white;
         }
     
         .contact-info {
