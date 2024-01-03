@@ -38,6 +38,7 @@ class PaymentMethods extends HTMLElement {
                 }
 
                 .payment-method {
+                    background-color:white;
                     padding: 0.5rem;
                     border: solid 1px grey;
                     border-radius: 10px;
