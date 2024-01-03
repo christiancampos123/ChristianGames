@@ -13,6 +13,7 @@ class ProductCard extends HTMLElement {
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
+                    
                 }
 
                 .product {
@@ -23,6 +24,7 @@ class ProductCard extends HTMLElement {
                     border: 1px solid #ddd;
                     border-radius: 8px;
                     overflow: hidden;
+                    margin-top:2rem;
                     background-color: #7da7c3;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 }
@@ -94,6 +96,14 @@ class ProductCard extends HTMLElement {
                     padding: 10px;
                     cursor: pointer;
                 }
+
+                .video-container{
+                    display:flex;
+                    justify-content:center;
+                    margin-bottom:2rem;
+                }
+
+                
             </style>
 
             <div class="product">
@@ -110,15 +120,16 @@ class ProductCard extends HTMLElement {
                     <p class="info-label">Géneros: <span>Aventura, Acción</span></p>
                     <p class="info-label">Nota: <span>4.5/5</span></p>
                     <p class="info-label">PEGI: <span>18+</span></p>
+                    
                     <div class="video-container">
                     <iframe
-                        width="100%"
-                        height="315"
+                        width="533"
+                        height="300"
                         src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
                         frameborder="0"
                         allowfullscreen
                     ></iframe>
-                </div>
+                    </div>
                     <!-- Otros detalles adicionales que desees agregar -->
                     <div class="action-buttons">
                         <div class="buy-button" onclick="handleBuy()">Comprar</div>
@@ -131,12 +142,9 @@ class ProductCard extends HTMLElement {
                 <!-- Descripción del producto -->
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
             </div>
-
-            
         `;
     }
 }

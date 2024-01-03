@@ -5,4 +5,8 @@ import './carrousel.js';
 import './footer.js';
 import './generos.js';
 import './fichaProducto.js';
-import './requisites.js'
+import './requisites.js';
+import './cartProducts.js';
+import './priceCalculation.js';
+import './checkoutPaymentMethods.js';
+import './formUserPayment.js'

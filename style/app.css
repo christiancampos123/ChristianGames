@@ -28,3 +28,41 @@
   top: 0px;
   z-index: 100;
 }
+
+.product-list-container {
+  display: flex;
+  
+}
+
+.product-list {
+  width:60%;
+  padding-left: 10%;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  
+  gap: 3rem;
+}
+
+.summary-component {
+  border-radius: 10px;
+  background-color:#7da7c3;
+  padding:1rem;
+  position: sticky;
+  margin-top: 3rem;
+  top: 60px;
+  bottom:60px;
+  align-self: flex-start; /* Ajusta esto según sea necesario */
+}
+
+.payment{
+  margin-top:3rem;
+  padding-left:10%;
+  display:flex;
+  gap:2rem;
+}
+
+.payment-column{
+  width:60%;
+}
