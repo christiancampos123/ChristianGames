@@ -30,6 +30,8 @@ class Summary extends HTMLElement {
 
     render() {
         const { subtotal, taxes, total } = this.calculateTotal();
+        const checkoutWord = this.getAttribute('data-checkout-word') || 'Checkout'; // Obtén el valor del atributo de datos
+
 
         this.shadow.innerHTML = /*html*/ `
             <style>
@@ -81,7 +83,7 @@ class Summary extends HTMLElement {
                 <span>${total}€</span>
             </div>
             <a href="./checkout.html">
-                <button class="checkout-button">Checkout</button>
+                <button class="checkout-button">${checkoutWord}</button>
             </a>
             `;
     }

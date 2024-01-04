@@ -9,4 +9,5 @@ import './requisites.js';
 import './cartProducts.js';
 import './priceCalculation.js';
 import './checkoutPaymentMethods.js';
-import './formUserPayment.js'
+import './formUserPayment.js';
+import './faqs.js';

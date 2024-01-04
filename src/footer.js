@@ -118,9 +118,9 @@ class Footer extends HTMLElement {
                 </div>
 
                 <ul class="links">
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/services">FAQS</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/services.html">FAQS</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
                     <!-- Puedes agregar otros enlaces aquí -->
                 </ul>
 
