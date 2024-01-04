@@ -92,7 +92,7 @@ class FAQList extends HTMLElement {
                     text-align: left;
                     width: 100%;
                     padding: 1em 0;
-                    color: #7288a2;
+                    color: black;
                     font-size: 1.15rem;
                     font-weight: 400;
                     border: none;
