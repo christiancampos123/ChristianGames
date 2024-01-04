@@ -96,19 +96,19 @@ class GameGrid extends HTMLElement {
 
     generateGameCards() {
         const games = [
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "30" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "45" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', discount: "50" },
             { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
             { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
             { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
@@ -122,8 +122,8 @@ class GameGrid extends HTMLElement {
             <div class="game-info">
                 <div class="game-title">${game.title}</div>
                 <div class="game-prices">
-                    <div class="game-price">${game.price}€</div>
-                    ${game.oldPrice !== undefined ? `<div class="game-old-price">${game.oldPrice}€</div>` : ''}
+                    <div class="game-price">${(game.price * (100-game.discount)/100).toFixed(2)}€</div>
+                    ${game.price !== undefined ? `<div class="game-old-price">${game.price}€</div>` : ''}
                     ${game.discount !== undefined ? `<div class="game-discount">${game.discount}%</div>` : ''}
                 </div>
             </div>
