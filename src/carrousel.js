@@ -3,8 +3,6 @@ class Carrousel extends HTMLElement {
       super();
       this.shadow = this.attachShadow({ mode: 'open' });
       this.slideIndex = 1;
-      this.prevButtonImage = "./images/arrow.jpg";
-      this.nextButtonImage = "./images/arrow.jpg";
       this.render();
   }
 
@@ -186,7 +184,7 @@ class Carrousel extends HTMLElement {
 
               /* Change the color of bg when user hover on it. */
               .dot:hover {
-                  opacity: 0.9;
+                  opacity: 0.5;
                   background: rgb(32, 32, 32);
               }
 
@@ -202,12 +200,12 @@ class Carrousel extends HTMLElement {
 
               <!--  Previous Button  -->
               <button class="btn-slide prev">
-                  <img src="${this.prevButtonImage}" alt="prevBtn" />
+              ◄
               </button>
 
               <!-- Next Button -->
               <button class="btn-slide next">
-                  <img src="${this.nextButtonImage}" alt="nextBtn" />
+              ►
               </button>
 
               <!--  Container for dots  -->
