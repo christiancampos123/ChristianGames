@@ -116,14 +116,17 @@ class GameGrid extends HTMLElement {
             { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
         ];
 
+
         return games.map(game => /*html*/ `
+
         <div class="game-card">
             <img class="game-image" src="${game.image}" alt="${game.title}">
             <div class="game-info">
                 <div class="game-title">${game.title}</div>
                 <div class="game-prices">
-                    <div class="game-price">${(game.price * (100-game.discount)/100).toFixed(2)}€</div>
-                    ${game.price !== undefined ? `<div class="game-old-price">${game.price}€</div>` : ''}
+                    ${game.discount !== undefined ? `<div class="game-price">${(game.price * (100-game.discount)/100).toFixed(2)}€</div>` : ''}
+                    ${game.discount == undefined ? `<div class="game-price">${game.price}€</div>` : ''}
+                    ${game.discount !== undefined ? `<div class="game-old-price">${game.price}€</div>` : ''}
                     ${game.discount !== undefined ? `<div class="game-discount">${game.discount}%</div>` : ''}
                 </div>
             </div>
