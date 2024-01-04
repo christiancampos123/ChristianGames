@@ -71,7 +71,7 @@ class ScrollToTopButton extends HTMLElement {
                 }
 
                 button::before {
-                    content: "Subir arriba";
+                    content: "Subir";
                     position: absolute;
                     background-color: #333;
                     color: #fff;

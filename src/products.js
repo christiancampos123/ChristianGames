@@ -63,6 +63,20 @@ class GameGrid extends HTMLElement {
                     font-weight: bold;
                 }
 
+                .game-prices{
+                    display:flex;
+                    gap: 1rem;
+                }
+                .game-old-price {
+                    text-decoration: line-through;
+                }
+
+                .game-discount {
+                    color: #FF91C0;
+                    font-weight: bold;
+                    border:solid 1px;
+                }
+
                 .title{
                     font-weight:bold;
                     font-size:2.5rem;
@@ -82,35 +96,39 @@ class GameGrid extends HTMLElement {
 
     generateGameCards() {
         const games = [
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego1.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
-            { title: 'Game 1', image: './images/juego2.jpg', price: '$29.99' },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego2.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99', oldPrice: '60', discount: "50" },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
+            { title: 'Game 1', image: './images/juego1.jpg', price: '29.99' },
         ];
 
         return games.map(game => /*html*/ `
-            <div class="game-card">
-                <img class="game-image" src="${game.image}" alt="${game.title}">
-                <div class="game-info">
-                    <div class="game-title">${game.title}</div>
-                    <div class="game-price">${game.price}</div>
+        <div class="game-card">
+            <img class="game-image" src="${game.image}" alt="${game.title}">
+            <div class="game-info">
+                <div class="game-title">${game.title}</div>
+                <div class="game-prices">
+                    <div class="game-price">${game.price}€</div>
+                    ${game.oldPrice !== undefined ? `<div class="game-old-price">${game.oldPrice}€</div>` : ''}
+                    ${game.discount !== undefined ? `<div class="game-discount">${game.discount}%</div>` : ''}
                 </div>
             </div>
-        `).join('');
+        </div>
+    `).join('');
     }
 }
 

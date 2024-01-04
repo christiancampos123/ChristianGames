@@ -1,95 +1,102 @@
 class ProductSlider extends HTMLElement {
   constructor() {
-      super();
-      this.shadow = this.attachShadow({ mode: 'open' });
-      this.products = [
-          {
-              name: 'Producto 1',
-              image: './images/juego1.jpg',
-              price: 19.99,
-          },
-          {
-              name: 'Producto 2',
-              image: './images/user-avatar.png',
-              price: 29.99,
-          },
-          {
-              name: 'Producto 3',
-              image: './images/juego1.jpg',
-              price: 39.99,
-          },
-          {
-            name: 'Producto 1',
-            image: './images/juego1.jpg',
-            price: 19.99,
-        },
-        {
-            name: 'Producto 2',
-            image: './images/user-avatar.png',
-            price: 29.99,
-        },
-        {
-            name: 'Producto 3',
-            image: './images/juego1.jpg',
-            price: 39.99,
-        },
-        {
-          name: 'Producto 1',
-          image: './images/juego1.jpg',
-          price: 19.99,
+    super();
+    this.shadow = this.attachShadow({ mode: 'open' });
+    this.products = [
+      {
+        name: 'Producto 1',
+        image: './images/juego1.jpg',
+        price: 19.99,
+        discount: 50,
       },
       {
-          name: 'Producto 2',
-          image: './images/user-avatar.png',
-          price: 29.99,
+        name: 'Producto 2',
+        image: './images/user-avatar.png',
+        price: 29.99,
+        discount: 50,
       },
       {
-          name: 'Producto 3',
-          image: './images/juego1.jpg',
-          price: 39.99,
+        name: 'Producto 3',
+        image: './images/juego1.jpg',
+        price: 39.99,
+        discount: 50,
       },
       {
         name: 'Producto 1',
         image: './images/juego1.jpg',
         price: 19.99,
-    },
-    {
+        discount: 50,
+      },
+      {
         name: 'Producto 2',
         image: './images/user-avatar.png',
         price: 29.99,
-    },
-    {
+        discount: 40,
+      },
+      {
         name: 'Producto 3',
         image: './images/juego1.jpg',
         price: 39.99,
-    },
-    {
-      name: 'Producto 1',
-      image: './images/juego1.jpg',
-      price: 19.99,
-  },
-  {
-      name: 'Producto 2',
-      image: './images/user-avatar.png',
-      price: 29.99,
-  },
-  {
-      name: 'Producto 3',
-      image: './images/juego1.jpg',
-      price: 39.99,
-  },
-          
-          
-          // ... (otros productos)
-      ];
-      this.currentSlide = 0;
+      },
+      {
+        name: 'Producto 1',
+        image: './images/juego1.jpg',
+        price: 19.99,
+        discount: 40,
+      },
+      {
+        name: 'Producto 2',
+        image: './images/user-avatar.png',
+        price: 29.99,
+      },
+      {
+        name: 'Producto 3',
+        image: './images/juego1.jpg',
+        price: 39.99,
+      },
+      {
+        name: 'Producto 1',
+        image: './images/juego1.jpg',
+        price: 19.99,
+        discount: 40,
+      },
+      {
+        name: 'Producto 2',
+        image: './images/user-avatar.png',
+        price: 29.99,
+      },
+      {
+        name: 'Producto 3',
+        image: './images/juego1.jpg',
+        price: 39.99,
+      },
+      {
+        name: 'Producto 1',
+        image: './images/juego1.jpg',
+        price: 19.99,
+      },
+      {
+        name: 'Producto 2',
+        image: './images/user-avatar.png',
+        price: 29.99,
+      },
+      {
+        name: 'Producto 3',
+        image: './images/juego1.jpg',
+        price: 39.99,
+      },
 
-      this.render();
-      this.attachEventListeners();
+
+      // ... (otros productos)
+    ];
+    this.currentSlide = 0;
+
+    this.render();
+    this.attachEventListeners();
   }
 
   render() {
-      this.shadow.innerHTML = `
+    this.shadow.innerHTML = `
       <style>
       /* PRODUCTS */
       .product {
@@ -304,39 +311,50 @@ class ProductSlider extends HTMLElement {
     const preBtn = [...this.shadow.querySelectorAll('.pre-btn')];
 
     productContainers.forEach((item, i) => {
-        let containerDimensions = item.getBoundingClientRect();
-        let containerWidth = containerDimensions.width;
+      let containerDimensions = item.getBoundingClientRect();
+      let containerWidth = containerDimensions.width;
 
-        nxtBtn[i].addEventListener('click', () => {
-            item.scrollLeft += containerWidth-500;
-        });
+      nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth - 500;
+      });
 
-        preBtn[i].addEventListener('click', () => {
-            item.scrollLeft -= containerWidth-500;
-        });
+      preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth - 500;
+      });
     });
-}
+  }
 
-getProductCardHTML(product) {
+  getProductCardHTML(product) {
+    let discountTag = '';
+    let discountedPrice = '';
+  
+    if (!isNaN(product.discount)) {
+      discountTag = `<span class="discount-tag">${product.discount}% off</span>`;
+      discountedPrice = `<span class="price">${(product.price - (product.price * product.discount / 100)).toFixed(2)}€</span>`;
+    }
+  
     return `
         <div class="product-card">
             <div class="product-image">
-                <span class="discount-tag">${product.discount}% off</span>
+                ${discountTag}
                 <a href="./fichaJuego.html">
-                <img src="${product.image}" class="product-thumb" alt="">
+                    <img src="${product.image}" class="product-thumb" alt="">
                 </a>
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
                 <h2 class="product-brand">${product.name}</h2>
-                <span class="price">$${product.price}</span><span class="actual-price">$${product.price + product.discount}</span>
+                ${discountedPrice ? `<span class="price">${discountedPrice}</span>` : `<span class="price">${product.price.toFixed(2)}€</span>`}
+                ${!isNaN(product.discount) ? `<span class="actual-price">${product.price.toFixed(2)}€</span>` : ''}
             </div>
         </div>
     `;
-}
+  }
+  
 
-attachEventListeners() {
-}
+
+  attachEventListeners() {
+  }
 }
 
 customElements.define('product-slider-component', ProductSlider);
