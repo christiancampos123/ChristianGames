@@ -38,7 +38,7 @@ class PaymentMethods extends HTMLElement {
                 }
 
                 .payment-method {
-                    background-color:white;
+                    background-color: white;
                     padding: 0.5rem;
                     border: solid 1px grey;
                     border-radius: 10px;
@@ -78,31 +78,31 @@ class PaymentMethods extends HTMLElement {
                 }
             </style>
 
-${this.paymentMethods.map((method, index) => `
-<div class="payment-method">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <title>${method.name}</title>
-        <path d="M5,6H23V18H5V6M14,9A3,3 0 0,1 17,12A3,3 0 0,1 14,15A3,3 0 0,1 11,12A3,3 0 0,1 14,9M9,8A2,2 0 0,1 7,10V14A2,2 0 0,1 9,16H19A2,2 0 0,1 21,14V10A2,2 0 0,1 19,8H9"/>
-    </svg>
-    <span>${method.name}</span>
-    <div class="radio-buttons">
-        <input type="radio" name="paymentMethod" value="${index}" id="method${index}">
-        <label for="method${index}"></label>
-    </div>
-</div>
-`).join('')}
-`;
+            ${this.paymentMethods.map((method, index) => `
+                <div class="payment-method">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>${method.name}</title>
+                        <path d="M5,6H23V18H5V6M14,9A3,3 0 0,1 17,12A3,3 0 0,1 14,15A3,3 0 0,1 11,12A3,3 0 0,1 14,9M9,8A2,2 0 0,1 7,10V14A2,2 0 0,1 9,16H19A2,2 0 0,1 21,14V10A2,2 0 0,1 19,8H9"/>
+                    </svg>
+                    <span>${method.name}</span>
+                    <div class="radio-buttons">
+                        <input type="radio" name="paymentMethod" value="${index}" id="method${index}">
+                        <label for="method${index}"></label>
+                    </div>
+                </div>
+            `).join('')}
+        `;
 
-// Agregamos los manejadores de clic después de renderizar el HTML
-this.addEventListeners();
-}
+        // Agregamos los manejadores de clic después de renderizar el HTML
+        this.addEventListeners();
+    }
 
-addEventListeners() {
-const containers = this.shadow.querySelectorAll('.payment-method');
-containers.forEach((container, index) => {
-container.addEventListener('click', () => this.handleContainerClick(index));
-});
-}
+    addEventListeners() {
+        const containers = this.shadow.querySelectorAll('.payment-method');
+        containers.forEach((container, index) => {
+            container.addEventListener('click', () => this.handleContainerClick(index));
+        });
+    }
 }
 
 customElements.define('payment-methods-component', PaymentMethods);

@@ -7,91 +7,90 @@ class Footer extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = /*html*/ `
-        <style>
-        :host {
-            display: block;
-        }
+            <style>
+                :host {
+                    display: block;
+                }
     
-        footer {
-            margin-top:5rem;
-            background-color: #022544;
-            color: white;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
-            padding-left: 10rem;
-            padding-right: 10rem;
-        }
+                footer {
+                    margin-top: 5rem;
+                    background-color: #022544;
+                    color: white;
+                    padding: 20px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    text-align: center;
+                    padding-left: 10rem;
+                    padding-right: 10rem;
+                }
     
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+                .social-icons {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
     
-        .social-icon {
-            display: flex;
-            align-items: center;
-            margin: 5px 0;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-            line-height: 1;
-        }
+                .social-icon {
+                    display: flex;
+                    align-items: center;
+                    margin: 5px 0;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    color: white;
+                    line-height: 1;
+                }
     
-        .social-icon svg {
-            width: 24px;
-            height: 24px;
-            margin-right: 5px;
-            fill:white;
-        }
+                .social-icon svg {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 5px;
+                    fill: white;
+                }
     
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
+                .contact-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
     
-        .links {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+                .links {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
     
-        .links li {
-            margin-bottom: 10px;
-        }
+                .links li {
+                    margin-bottom: 10px;
+                }
     
-        .links a {
-            color: #add8e6;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
+                .links a {
+                    color: #add8e6;
+                    text-decoration: none;
+                    transition: color 0.3s ease-in-out;
+                }
     
-        .links a:hover {
-            color: #87ceeb;
-        }
+                .links a:hover {
+                    color: #87ceeb;
+                }
     
-        .contact-info .social-icon {
-            font-size: 1rem;
-        }
+                .contact-info .social-icon {
+                    font-size: 1rem;
+                }
     
-        .contact-info .social-icon svg {
-            width: 18px;
-            height: 18px;
-            margin-right: 5px;
-        }
+                .contact-info .social-icon svg {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 5px;
+                }
     
-        .copyright {
-            font-size: 0.8rem;
-            grid-column: span 3;
-            margin-top: auto;
-        }
-    </style>
+                .copyright {
+                    font-size: 0.8rem;
+                    grid-column: span 3;
+                    margin-top: auto;
+                }
+            </style>
     
-
             <footer>
                 <div class="social-icons">
                     <div class="social-icon" onclick="handleSocial('twitter')">

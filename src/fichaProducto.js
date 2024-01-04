@@ -13,7 +13,6 @@ class ProductCard extends HTMLElement {
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    
                 }
 
                 .product {
@@ -24,7 +23,7 @@ class ProductCard extends HTMLElement {
                     border: 1px solid #ddd;
                     border-radius: 8px;
                     overflow: hidden;
-                    margin-top:2rem;
+                    margin-top: 2rem;
                     background-color: #7da7c3;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 }
@@ -63,7 +62,7 @@ class ProductCard extends HTMLElement {
                 }
 
                 .description {
-                    border-radius:10px;
+                    border-radius: 10px;
                     padding-top: 2rem;
                     padding-right: 2%;
                     padding-left: 2%;
@@ -83,27 +82,25 @@ class ProductCard extends HTMLElement {
                     background-color: #00ff00; /* Verde */
                     color: #000;
                     padding: 10px;
-                    width:20%;
+                    width: 20%;
                     cursor: pointer;
-                    text-align:center;
+                    text-align: center;
                 }
 
                 .cart-button {
                     background-color: yellow;
                     color: #000;
-                    text-align:center;
-                    width:20%;
+                    text-align: center;
+                    width: 20%;
                     padding: 10px;
                     cursor: pointer;
                 }
 
-                .video-container{
-                    display:flex;
-                    justify-content:center;
-                    margin-bottom:2rem;
+                .video-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 2rem;
                 }
-
-                
             </style>
 
             <div class="product">
@@ -120,15 +117,15 @@ class ProductCard extends HTMLElement {
                     <p class="info-label">Géneros: <span>Aventura, Acción</span></p>
                     <p class="info-label">Nota: <span>4.5/5</span></p>
                     <p class="info-label">PEGI: <span>18+</span></p>
-                    
+
                     <div class="video-container">
-                    <iframe
-                        width="533"
-                        height="300"
-                        src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
-                        frameborder="0"
-                        allowfullscreen
-                    ></iframe>
+                        <iframe
+                            width="533"
+                            height="300"
+                            src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
+                            frameborder="0"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                     <!-- Otros detalles adicionales que desees agregar -->
                     <div class="action-buttons">
@@ -140,7 +137,7 @@ class ProductCard extends HTMLElement {
 
             <div class="description">
                 <!-- Descripción del producto -->
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum

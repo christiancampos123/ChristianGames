@@ -71,15 +71,14 @@ class GameGrid extends HTMLElement {
                 }
 
             </style>
-            <div class = "products">
-                <div class = "title">Videojuegos</div>
+            <div class="products">
+                <div class="title">Videojuegos</div>
                 <div class="game-grid">
                     ${this.generateGameCards()}
                 </div>
             </div>
         `;
     }
-
 
     generateGameCards() {
         const games = [

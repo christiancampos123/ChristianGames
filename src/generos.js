@@ -18,59 +18,58 @@ class GenreCarousel extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = /*html*/ `
-<style>
-    :host {
-        display: flex;
-        overflow-x: hidden;
-        align-items:center;
-    }
+            <style>
+                :host {
+                    display: flex;
+                    overflow-x: hidden;
+                    align-items:center;
+                }
 
-    .carousel-container {
-        display: flex;
-        transition: transform 0.3s ease-in-out;
-    }
+                .carousel-container {
+                    display: flex;
+                    transition: transform 0.3s ease-in-out;
+                }
 
-    .genre-button {
-        flex: 0 0 auto;
-        margin-right: 10px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-        background:#7da7c3; /* Borde */
-        border-radius: 8px; /* Bordes redondeados */
-        padding: 5px 10px; /* Espaciado interno */
-        font-weight: bold;
-        
-    }
+                .genre-button {
+                    flex: 0 0 auto;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    border: 1px solid #ccc;
+                    background:#7da7c3; /* Borde */
+                    border-radius: 8px; /* Bordes redondeados */
+                    padding: 5px 10px; /* Espaciado interno */
+                    font-weight: bold;
+                }
 
-    .arrow {
-        position: absolute;
-        color:white;
-        cursor: pointer;
-        margin: 0 60px; /* Ajusta el margen según tus necesidades */
-    }
+                .arrow {
+                    position: absolute;
+                    color:white;
+                    cursor: pointer;
+                    margin: 0 60px; /* Ajusta el margen según tus necesidades */
+                }
 
-    .arrow-left {
-        left: 0;
-    }
+                .arrow-left {
+                    left: 0;
+                }
 
-    .arrow-right {
-        right: 0;
-    }
-    .carousel {
-    position: relative;
-    overflow: hidden;
-    margin-left: 10%;
-    margin-right: 10%;
-    }
+                .arrow-right {
+                    right: 0;
+                }
 
-</style>
-<div class="arrow arrow-left">◄</div>
-<div class="carousel">
-<div class="carousel-container">
-    ${this.genres.map(genre => `<div class="genre-button">${genre}</div>`).join('')}
-</div>
-</div>
-<div class="arrow arrow-right">►</div>
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
+            </style>
+            <div class="arrow arrow-left">◄</div>
+            <div class="carousel">
+                <div class="carousel-container">
+                    ${this.genres.map(genre => `<div class="genre-button">${genre}</div>`).join('')}
+                </div>
+            </div>
+            <div class="arrow arrow-right">►</div>
         `;
         this.updateCarousel();
     }
