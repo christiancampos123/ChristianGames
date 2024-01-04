@@ -45,7 +45,7 @@ class GenreCarousel extends HTMLElement {
                     position: absolute;
                     color:white;
                     cursor: pointer;
-                    margin: 0 60px; /* Ajusta el margen según tus necesidades */
+                    margin: 0 80px; /* Ajusta el margen según tus necesidades */
                 }
 
                 .arrow-left {

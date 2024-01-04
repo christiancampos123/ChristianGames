@@ -11,3 +11,4 @@ import './priceCalculation.js';
 import './checkoutPaymentMethods.js';
 import './formUserPayment.js';
 import './faqs.js';
+import './scrollTop.js';

@@ -34,6 +34,7 @@ class Header extends HTMLElement {
                 .search-bar input {
                     width: 100%; /* El doble de ancho */
                     padding: 10px; /* Ajusta el padding según tus necesidades */
+                    border-radius:10px;
                 }
 
                 .user-area {

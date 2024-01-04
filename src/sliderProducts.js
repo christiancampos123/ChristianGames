@@ -229,20 +229,20 @@ class ProductSlider extends HTMLElement {
       }
       
       .pre-btn {
-        left: -10px;
+        left: 50px;
         transform: rotate(180deg);
         border-radius:2rem;
       }
       
       .nxt-btn {
-        right: -10px;
+        right: 50px;
       }
       
       .pre-btn img,
       .nxt-btn img {
         opacity: 0.8;
-        width: 35px; /* Ajusta el ancho según tus necesidades */
-        height: 100px;
+        width: 50px; 
+        height: 50px;
         border-radius:2rem;
       }
       
