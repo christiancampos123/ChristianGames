@@ -12,6 +12,10 @@ class GenreCarousel extends HTMLElement {
         this.currentIndex = 0; // Iniciando desde la primera página
         this.valueToMove = 0.35;
 
+
+    }
+
+    connectedCallback(){
         this.render();
         this.addEventListeners();
     }

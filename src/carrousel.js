@@ -3,8 +3,9 @@ class Carrousel extends HTMLElement {
       super();
       this.shadow = this.attachShadow({ mode: 'open' });
       this.slideIndex = 1;
-      this.render();
+      
   }
+
 
   pauseAutoSlider() {
       clearInterval(this.autoSliderInterval);
@@ -18,6 +19,7 @@ class Carrousel extends HTMLElement {
 
   connectedCallback() {
       this.startAutoSlider();
+      this.render();
   }
 
   startAutoSlider() {

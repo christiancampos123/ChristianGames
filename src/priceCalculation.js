@@ -12,6 +12,9 @@ class Summary extends HTMLElement {
             // Agrega más productos según sea necesario
         ];
 
+    }
+
+    connectedCallback(){
         this.render();
     }
 

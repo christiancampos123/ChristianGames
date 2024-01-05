@@ -12,6 +12,10 @@ class FAQList extends HTMLElement {
             // Agrega más preguntas y respuestas según sea necesario
         ];
 
+        ;
+    }
+
+    connectedCallback(){
         this.render();
     }
 

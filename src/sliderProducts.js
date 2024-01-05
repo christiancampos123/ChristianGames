@@ -91,9 +91,14 @@ class ProductSlider extends HTMLElement {
     ];
     this.currentSlide = 0;
 
+
+
+  }
+
+  connectedCallback(){
     this.render();
     this.attachEventListeners();
-  }
+}
 
   render() {
     this.shadow.innerHTML = `

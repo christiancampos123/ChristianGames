@@ -2,6 +2,9 @@ class GameGrid extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({ mode: 'open' });
+    }
+
+    connectedCallback(){
         this.render();
     }
 

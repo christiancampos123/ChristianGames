@@ -18,7 +18,11 @@ class PaymentMethods extends HTMLElement {
         // Bind para asegurar que 'this' sea correcto dentro del método
         this.handleContainerClick = this.handleContainerClick.bind(this);
 
+    }
+
+        connectedCallback(){
         this.render();
+        this.addEventListeners();
     }
 
     handleContainerClick(index) {

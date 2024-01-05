@@ -9,6 +9,9 @@ class ScrollToTopButton extends HTMLElement {
     connectedCallback() {
         // Agregar listener para el evento de desplazamiento
         window.addEventListener('scroll', () => this.toggleVisibility());
+
+            this.render();
+
     }
 
     disconnectedCallback() {
