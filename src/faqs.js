@@ -3,7 +3,7 @@ class FAQList extends HTMLElement {
         super();
         this.shadow = this.attachShadow({ mode: 'open' });
         this.faqs = [
-            { question: '¿Cuál es el objetivo de este sitio?', answer: 'Lcctetur a co t  amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing elamet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscing elit.' },
+            { question: '¿Cuál es el objetivo de este sitio?', answer: 'Lcctetur a co t  amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, coning el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing el amet, consectetur adipiscing elamet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscin a co t amet, consectetur adipiscing elit.Lorem ipsuscing elit.' },
             { question: '¿Cómo puedo contactar con el soporte?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
             { question: '¿Cuáles son los métodos de pago aceptados?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
             { question: '¿Cuál es el objetivo de este sitio?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
@@ -202,19 +202,23 @@ class FAQList extends HTMLElement {
         const items = this.shadow.querySelectorAll('.accordion button');
 
         function toggleAccordion() {
+            console.log("entro");
             const itemToggle = this.getAttribute('aria-expanded');
             const content = this.nextElementSibling;
+            content.style.height = '0';
 
-            for (let i = 0; i < items.length; i++) {
-                items[i].setAttribute('aria-expanded', 'false');
-                items[i].nextElementSibling.style.height = '0';
-            }
+
+            // for (let i = 0; i < items.length; i++) {
+            //     items[i].setAttribute('aria-expanded', 'false');
+            //     items[i].nextElementSibling.style.height = '0';
+            // }
 
             if (itemToggle == 'false') {
                 this.setAttribute('aria-expanded', 'true');
                 content.style.height = content.scrollHeight + 'px';
             } else {
                 this.setAttribute('aria-expanded', 'false');
+                content.style.height = '0';
             }
         }
 
@@ -228,7 +232,7 @@ class FAQList extends HTMLElement {
         let nuevaAltura = alturaActual + divMasGrande + 50;
 
         // Asignar la nueva altura al contenedor
-        contenedor.style.height = `${nuevaAltura}px`;
+        //contenedor.style.height = `${nuevaAltura}px`;
     }
 }
 
