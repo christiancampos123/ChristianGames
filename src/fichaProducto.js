@@ -76,24 +76,29 @@ class ProductCard extends HTMLElement {
                     justify-content: center;
                     gap: 1rem;
                     margin-top: auto;
+                    
                 }
 
                 .buy-button {
-                    background-color: #00ff00; /* Verde */
+                    background-color: YellowGreen; /* Verde */
                     color: #000;
                     padding: 10px;
                     width: 20%;
                     cursor: pointer;
                     text-align: center;
+                    border-radius:10px;
+                    font-weight:bold;
                 }
 
                 .cart-button {
-                    background-color: yellow;
+                    background-color: Orange;
                     color: #000;
                     text-align: center;
                     width: 20%;
                     padding: 10px;
                     cursor: pointer;
+                    border-radius:10px;
+                    font-weight:bold;
                 }
 
                 .video-container {
@@ -122,7 +127,7 @@ class ProductCard extends HTMLElement {
                         <iframe
                             width="533"
                             height="300"
-                            src="https://www.youtube.com/embed/TU_ID_DE_VIDEO"
+                            src="https://www.youtube.com/embed/rXMX4YJ7Lks"
                             frameborder="0"
                             allowfullscreen
                         ></iframe>
